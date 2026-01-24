@@ -4,6 +4,8 @@ Proyecto en Python para gestionar productos usando listas y diccionarios.
 
 Incluye menú interactivo con opciones para agregar, listar, buscar y eliminar productos.
 
+El sistema está organizado en un paquete que contiene módulos para menú, validaciones y gestión de datos
+
 Tecnologías
 Python 3
 
