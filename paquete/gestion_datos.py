@@ -19,7 +19,7 @@ def agregar_producto(productos):
     familia = input("Ingrese familia: ")
 
     # Solicita y convierte los datos numéricos
-    precio = int(input("Ingrese precio: "))
+    costo = int(input("Ingrese costo: "))
     cantidad = int(input("Ingrese cantidad en stock: "))
 
     # Agrega el producto al diccionario usando el SKU como clave
@@ -31,7 +31,7 @@ def agregar_producto(productos):
             "familia": familia
         },
         "stock": {
-            "precio": precio,
+            "costo": costo,
             "cantidad": cantidad
         }
     }

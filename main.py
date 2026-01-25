@@ -7,8 +7,9 @@
 # Para importar funciones desde PAQUETE (Ref. Clase 7)
 
 from paquete.menu import mostrar_menu
+from paquete.gestion_datos import agregar_producto
 
-# Lista principal donde se guardarán los productos (Ref. Clase 4 : Ejercicio final.py)
+# Diccionario principal donde se guardarán los productos (Ref. Clase 4 : Ejercicio final.py)
 
 productos = {}
 
@@ -16,4 +17,5 @@ productos = {}
 # Cometario del profe : "Si no llamo la función Python no hace nada"
 
 mostrar_menu(productos)
+
 
