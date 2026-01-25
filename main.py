@@ -10,7 +10,7 @@ from paquete.menu import mostrar_menu
 
 # Lista principal donde se guardarán los productos (Ref. Clase 4 : Ejercicio final.py)
 
-productos = []
+productos = {}
 
 # Llamamos a la función dentro del paquete para mostrar el menú
 # Cometario del profe : "Si no llamo la función Python no hace nada"
