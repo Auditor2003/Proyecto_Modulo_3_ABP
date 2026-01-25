@@ -54,6 +54,7 @@ Mientras el usuario **NO elija salir**:
 
 > Se utiliza la mayor cantidad de funciones vistas en clase, modularización del código  
 > y como **bonus**, el uso de diccionarios anidados.
+> Diicionario anidado en gestion_datos.py Lin 58-62
 
 ---
 
