@@ -5,13 +5,16 @@ Aquí pruebo la modularización del menú inicial
 
 """
 
+# Aqui traigo una de la herrameintas de la caja gestion_datos.py
+from paquete.gestion_datos import agregar_producto
+
 def mostrar_menu(productos):
 
     # Ciclo para que el menú se repita hasta que el usuario salga
     # Incluyo la condición booleana TRUE solicitada
 
     while True:
-        print("\nMENÚ PRINCIPAL")
+        print("MENÚ PRINCIPAL")
         print("1. Agregar producto")
         print("2. Listar productos")
         print("3. Buscar producto")
@@ -21,7 +24,7 @@ def mostrar_menu(productos):
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            print("agregar producto al Sistema")
+            agregar_producto(productos)
 
         elif opcion == "2":
             print("Lista de productos en Stock")

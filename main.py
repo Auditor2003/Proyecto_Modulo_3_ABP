@@ -7,7 +7,6 @@
 # Para importar funciones desde PAQUETE (Ref. Clase 7)
 
 from paquete.menu import mostrar_menu
-from paquete.gestion_datos import agregar_producto
 
 # Diccionario principal donde se guardarán los productos (Ref. Clase 4 : Ejercicio final.py)
 

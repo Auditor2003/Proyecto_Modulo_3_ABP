@@ -1,5 +1,6 @@
 # Creamos la función agregar_productos en paquete
 # (Ref. Clase 9 "Libros" - Ejercicio_Final.py)
+# Esta sería como la caja de herramientas
 
 def agregar_producto(productos):
     # Muestra el título del proceso en pantalla
