@@ -5,6 +5,13 @@
 def agregar_producto(productos):
     # Muestra el título del proceso en pantalla
     print("AGREGAR PRODUCTO")
+    print("Formato de SKU según tipo de artículo: SKU + 000 (Código)")
+    print("MP  - Materias Primas para Producción")
+    print("PT  - Productos Terminados para Venta")
+    print("AOF - Artículos de Oficina")
+    print("ADS - Artículos de Seguridad")
+    print("-" * 40)
+
 
     # Solicita al usuario el SKU del producto
     sku = input("Ingrese SKU: ")
