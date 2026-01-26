@@ -1,4 +1,3 @@
-
 # Proyecto Modulo 3 - ABP
 # Sistema de Control de Stock
 # Autor : Diego Muñoz
@@ -7,7 +6,7 @@
 # Para importar funciones desde PAQUETE (Ref. Clase 7)
 
 from paquete.menu import mostrar_menu
-from paquete.menu import listar_productos
+
 
 # Diccionario principal donde se guardarán los productos (Ref. Clase 4 : Ejercicio final.py)
 

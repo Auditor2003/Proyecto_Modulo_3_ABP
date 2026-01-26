@@ -8,8 +8,8 @@ Aquí pruebo la modularización del menú inicial
 # Aqui traigo una de la herrameintas de la caja gestion_datos.py
 from paquete.gestion_datos import agregar_producto
 from paquete.gestion_datos import listar_productos
-from paquete.gestion_datos import buscar_producto
 from paquete.gestion_datos import eliminar_producto
+from paquete.funciones_utiles import buscar_por_familia
 
 
 def mostrar_menu(productos):
@@ -25,7 +25,6 @@ def mostrar_menu(productos):
         print("3. Buscar producto")
         print("4. Eliminar producto")
         print("5. Salir")
-
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
@@ -35,7 +34,7 @@ def mostrar_menu(productos):
             listar_productos(productos)
 
         elif opcion == "3":
-            buscar_producto(productos) 
+            buscar_por_familia(productos) 
         
         elif opcion == "4":
             eliminar_producto(productos)
