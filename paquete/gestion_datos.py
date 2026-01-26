@@ -68,3 +68,46 @@ def listar_productos(productos):
         print(f"  Stock: {cantidad}")
         print("-" * 30)  # Esto se lo agregué para el formato
 
+# Función para buscar un producto por SKU
+
+def buscar_producto(productos):
+    print("BUSCAR PRODUCTO")
+
+    # Pedimos el SKU a buscar
+
+    sku = input("Ingrese el SKU del producto: ")
+
+    # Verificamos si existe en el diccionario
+
+    if sku in productos:
+        print("Producto encontrado:")
+
+        # Accedemos a los datos del producto
+
+        datos = productos[sku]
+
+        print(f"SKU: {sku}")
+        print(f"Nombre: {datos['info']['nombre']}")
+        print(f"Familia: {datos['info']['familia']}")
+        print(f"Costo: {datos['stock']['costo']}")
+        print(f"Stock: {datos['stock']['cantidad']}")
+    else:
+        print("Producto no encontrado.")
+
+# Función para eliminar un producto por SKU
+
+def eliminar_producto(productos):
+    print("ELIMINAR PRODUCTO")
+
+    # Pedimos el SKU a eliminar
+
+    sku = input("Ingrese el SKU del producto a eliminar: ")
+
+    # Verificamos si existe
+
+    if sku in productos:
+        del productos[sku]   # BORRAMOS el producto
+
+        print("Producto eliminado correctamente.")
+    else:
+        print("No se encontró el producto.")
