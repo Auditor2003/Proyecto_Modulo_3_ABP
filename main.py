@@ -18,4 +18,3 @@ productos = {}
 
 mostrar_menu(productos)
 
-

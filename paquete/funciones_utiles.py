@@ -9,7 +9,7 @@ def buscar_por_familia(productos):
     print("2. Productos Terminados para Venta")
     print("3. Artículos de Oficina")
     print("4. Artículos de Seguridad")
-    
+    print("5. Todos los artículos")
 
     opcion = input("Ingrese una opción: ")
 
@@ -31,7 +31,10 @@ def buscar_por_familia(productos):
 
     # Recorremos todos los productos
     for sku, datos in productos.items():
-        if datos["info"]["familia"] == familia_buscada:
+
+        # Si eleje TODOS va por defecto , si no BUSCA por Familia
+        
+        if familia_buscada == "TODOS" or datos["info"]["familia"] == familia_buscada:
             encontrado = True
             print(f"- SKU: {sku}")
             print(f"  Nombre: {datos['info']['nombre']}")
