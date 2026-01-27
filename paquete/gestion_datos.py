@@ -24,8 +24,19 @@ def agregar_producto(productos):
 
     # Verifica si el SKU ya existe en el diccionario productos
     if sku in productos:
-        print("El SKU ya existe.")
-        # Sale de la función sin agregar el producto
+        print("El producto ya existe. Se agregará stock adicional.")
+
+        # Pide la cantidad extra a agregar
+        # Agregamos una verificación Try-Except para verificar error de ingreso (Ref. Clase 7 --> temperatura_ejemplo.py)
+        try:
+            cantidad_extra = int(input("Ingrese cantidad a sumar al stock: "))
+            # Suma la cantidad al stock existente
+            productos[sku]["stock"]["cantidad"] += cantidad_extra
+            print(f"Stock actualizado correctamente. Nueva cantidad: {productos[sku]['stock']['cantidad']}")
+        except ValueError:
+            print("Cantidad inválida. No se actualizó el stock.")
+        
+        # Salimos de la función después de sumar
         return
 
     # Solicita los datos generales del producto
@@ -33,14 +44,15 @@ def agregar_producto(productos):
     familia = input("Ingrese familia (MP-PT-AOF-ADS): ")
 
     # Solicita y convierte los datos numéricos
-    costo = int(input("Ingrese costo: "))
-    cantidad = int(input("Ingrese cantidad en stock: "))
+    try:
+        costo = int(input("Ingrese costo: "))
+        cantidad = int(input("Ingrese cantidad en stock: "))
+    except ValueError:
+        print("Error: costo o cantidad inválida. Producto no agregado.")
+        return
 
     # Agrega el producto al diccionario usando el SKU como clave
-
     # (Ref Clase 7 --> Ejemplo_lista_diccionario.py y Reapso_diccionario.py)
-    # podría ser así, pero no me cuesta más --> productos[sku] = {"info": {"nombre": nombre, "familia": familia}, "stock": {"costo": costo, "cantidad": cantidad}}
-
     productos[sku] = {
         "info": {
             "nombre": nombre,
@@ -49,7 +61,7 @@ def agregar_producto(productos):
         "stock": {
             "costo": costo,
             "cantidad": cantidad
-                    }
+        }
     }
 
     # Confirma que el producto fue agregado correctamente
@@ -69,7 +81,6 @@ def listar_productos(productos):
     print("LISTA DE PRODUCTOS")
 
     # Aqui va el BONUS de diccionarios anidados (Ref Clase 9 --> Otros_Ejemplos_Dict.py )
-
     for sku, datos in productos.items():
         nombre = datos["info"]["nombre"]
         familia = datos["info"]["familia"]
@@ -84,21 +95,17 @@ def listar_productos(productos):
         print("-" * 30)  # Esto se lo agregué para el formato
 
 # Función para buscar un producto por SKU
-
 def buscar_producto(productos):
     print("BUSCAR PRODUCTO")
 
     # Pedimos el SKU a buscar
-
     sku = input("Ingrese el SKU del producto: ")
 
     # Verificamos si existe en el diccionario
-
     if sku in productos:
         print("Producto encontrado:")
 
         # Accedemos a los datos del producto
-
         datos = productos[sku]
 
         print(f"SKU: {sku}")
@@ -110,23 +117,19 @@ def buscar_producto(productos):
         print("Producto no encontrado.")
 
 # Función para eliminar un producto por SKU
-
 def eliminar_producto(productos):
     print("ELIMINAR PRODUCTO")
 
     # Pedimos el SKU a eliminar
-
     sku = input("Ingrese el SKU del producto a eliminar: ")
 
     # Verificamos si el SKU existe en el diccionario
     if sku in productos:
-
         # Mostramos información básica antes de eliminar (feedback al usuario)
         print(f"Producto encontrado: {productos[sku]['info']['nombre']}")
 
         # Confirmación para evitar errores
         # Usamos lower (s/n) para validar si estamos seguros de eliminar (Ref. Clase 4 --> ejercicio livecoding_cine.py)   
-
         confirmacion = input("¿Está seguro que desea eliminarlo? (s/n): ").lower()
 
         if confirmacion == "s":
