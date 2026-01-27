@@ -19,16 +19,18 @@ def agregar_producto(productos):
     print("-" * 60)
 
     # Tupla de familias válidas (estructura inmutable)
-    # Las familias son constantes por lo que TUPLA es el mejor elemento
-    # Ref. Clase 8 --> Ejercicio sistema_coordenadas_tupla.py
-    
     FAMILIAS = ("MP", "PT", "AOF", "ADS")
+
+    # SET para manejar SKUs únicos (no reemplaza al diccionario principal, sería complemento)
+    # Ref uso SET Clase 8 --> Ejercicio mi_set.py 
+
+    skus_existentes = set(productos.keys())
 
     # Solicita al usuario el SKU del producto
     sku = input("Ingrese SKU: ")
 
     # Verifica si el SKU ya existe en el diccionario productos
-    if sku in productos:
+    if sku in skus_existentes:
         print("El producto ya existe. Se agregará stock adicional.")
 
         # Pide la cantidad extra a agregar
