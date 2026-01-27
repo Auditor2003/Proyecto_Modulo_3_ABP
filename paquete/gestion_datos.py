@@ -112,11 +112,23 @@ def eliminar_producto(productos):
 
     sku = input("Ingrese el SKU del producto a eliminar: ")
 
-    # Verificamos si existe
-
+    # Verificamos si el SKU existe en el diccionario
     if sku in productos:
-        del productos[sku]   # BORRAMOS el producto
 
-        print("Producto eliminado correctamente.")
+        # Mostramos información básica antes de eliminar (feedback al usuario)
+        print(f"Producto encontrado: {productos[sku]['info']['nombre']}")
+
+        # Confirmación para evitar errores
+        # Usamos lower (s/n) para validar si estamos seguros de eliminar (Ref. Clase 4 --> ejercicio livecoding_cine.py)   
+
+        confirmacion = input("¿Está seguro que desea eliminarlo? (s/n): ").lower()
+
+        if confirmacion == "s":
+            # Eliminamos el producto usando del
+            del productos[sku]
+            print("Producto eliminado correctamente.")
+        else:
+            print("Eliminación cancelada.")
     else:
-        print("No se encontró el producto.")
+        # Si el SKU no existe
+        print("El SKU ingresado no existe.")
