@@ -30,7 +30,6 @@ def agregar_producto(productos):
         # Agregamos una verificación Try-Except para verificar error de ingreso (Ref. Clase 7 --> temperatura_ejemplo.py)
         try:
             cantidad_extra = int(input("Ingrese cantidad a sumar al stock: "))
-            # Suma la cantidad al stock existente
             productos[sku]["stock"]["cantidad"] += cantidad_extra
             print(f"Stock actualizado correctamente. Nueva cantidad: {productos[sku]['stock']['cantidad']}")
         except ValueError:
@@ -40,11 +39,13 @@ def agregar_producto(productos):
         return
 
     # Solicita los datos generales del producto
+
     nombre = input("Ingrese nombre del producto: ")
     familia = input("Ingrese familia (MP-PT-AOF-ADS): ")
 
-    # Solicita y convierte los datos numéricos 
-    # Se usa float para calcular a fututo PMP (Costo Medio Ponderado)
+    # Solicita y revisa los datos numéricos
+    # Se usa float para calcular a futuro PMP (Costo Medio Ponderado)
+
     try:
         costo = float(input("Ingrese costo: "))
         cantidad = int(input("Ingrese cantidad en stock: "))
@@ -54,6 +55,7 @@ def agregar_producto(productos):
 
     # Agrega el producto al diccionario usando el SKU como clave
     # (Ref Clase 7 --> Ejemplo_lista_diccionario.py y Reapso_diccionario.py)
+    
     productos[sku] = {
         "info": {
             "nombre": nombre,
