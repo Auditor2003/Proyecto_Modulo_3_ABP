@@ -123,15 +123,15 @@ Mientras el usuario **NO elija salir**:
 Para facilitar la revisión del proyecto, a continuación se detallan los principales **conceptos y estructuras vistas en clase**, indicando **dónde se aplican dentro del código**.
 
 > La mayoría de estos conceptos se implementan en el módulo  
-> **`paquete/gestion_datos.py`**, que concentra la lógica principal del sistema.
+> **paquete/gestion_datos.py**, que concentra la lógica principal del sistema.
 
 ---
 
 ### Diccionario
-Se utiliza un **diccionario principal** llamado `productos`, donde cada producto se almacena usando el **SKU como clave**.
+Se utiliza un **diccionario principal** llamado productos, donde cada producto se almacena usando el **SKU como clave**.
 
-- El diccionario `productos` se recibe como parámetro en las funciones.
-- Se accede a los datos mediante claves (`productos[sku]`).
+- El diccionario productos se recibe como parámetro en las funciones.
+- Se accede a los datos mediante claves (productos[sku]).
 
 ---
 
@@ -139,11 +139,11 @@ Se utiliza un **diccionario principal** llamado `productos`, donde cada producto
 Cada producto se guarda como un **diccionario que contiene otros diccionarios**, separando información general y datos de stock.
 
 **Ubicación:**  
-`gestion_datos.py` – función `agregar_producto()`
+gestion_datos.py – función agregar_producto()
 
 **Estructura aplicada:**
-- `info`: nombre y familia  
-- `stock`: costo y cantidad
+- info: nombre y familia  
+- stock: costo y cantidad
 
 ---
 
@@ -151,11 +151,11 @@ Cada producto se guarda como un **diccionario que contiene otros diccionarios**,
 El sistema **recorre directamente el diccionario** de productos sin crear listas manualmente.
 
 **Ubicación:**
-- `listar_productos()`
-- `buscar_por_familia()`
+- listar_productos()
+- buscar_por_familia()
 
 **Ejemplo conceptual:**
-- Uso de `for sku, datos in productos.items()`
+- Uso de for sku, datos in productos.items()
 
 ---
 
@@ -163,7 +163,7 @@ El sistema **recorre directamente el diccionario** de productos sin crear listas
 Se utiliza un **set** para manejar la unicidad de los SKUs existentes.
 
 **Ubicación:**  
-`gestion_datos.py` – función `agregar_producto()`
+gestion_datos.py – función agregar_producto()
 
 **Uso principal:**
 - Verificar si un SKU ya existe antes de agregar un producto nuevo.
@@ -174,7 +174,7 @@ Se utiliza un **set** para manejar la unicidad de los SKUs existentes.
 Se utiliza una **tupla** para definir las familias válidas de productos.
 
 **Ubicación:**  
-`gestion_datos.py` – función `agregar_producto()`
+gestion_datos.py – función agregar_producto()
 
 **Motivo:**
 - Estructura inmutable utilizada para validaciones.
@@ -189,7 +189,7 @@ Se aplican validaciones básicas como:
 - Validar que la familia ingresada sea correcta  
 
 **Ubicación principal:**  
-`gestion_datos.py`
+gestion_datos.py
 
 ---
 
@@ -201,9 +201,9 @@ Se utilizan estructuras condicionales para controlar el flujo del programa segú
 - Confirmaciones del usuario
 
 **Ubicación:**
-- `menu.py`
-- `gestion_datos.py`
-- `funciones_utiles.py`
+- menu.py
+- gestion_datos.py
+- funciones_utiles.py
 
 ---
 
@@ -211,7 +211,7 @@ Se utilizan estructuras condicionales para controlar el flujo del programa segú
 Se implementa manejo de errores para evitar que el programa se detenga ante ingresos incorrectos de datos numéricos.
 
 **Ubicación:**  
-`gestion_datos.py` – función `agregar_producto()`
+gestion_datos.py – función agregar_producto()
 
 **Uso principal:**
 - Validar costo y cantidad ingresados por el usuario.
