@@ -22,11 +22,18 @@ def mostrar_menu(productos):
 
     while True:
         print("MENÚ PRINCIPAL")
+        # Separador visual idea traida de Markdown
+        print("-" * 40)
+
         print("1. Agregar producto")
         print("2. Listar productos")
         print("3. Buscar producto")
         print("4. Eliminar producto")
         print("5. Salir")
+
+        # Separador visual idea traida de Markdown
+        print("-" * 40)
+        
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":

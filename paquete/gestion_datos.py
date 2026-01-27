@@ -5,11 +5,17 @@
 def agregar_producto(productos):
     # Muestra el título del proceso en pantalla
     print("AGREGAR PRODUCTO")
-    print("Formato de SKU según tipo de artículo: SKU + 000 (Código)")
-    print("MP  - Materias Primas para Producción")
-    print("PT  - Productos Terminados para Venta")
-    print("AOF - Artículos de Oficina")
-    print("ADS - Artículos de Seguridad")
+
+    # Separador visual idea traida de Markdown
+    print("-" * 40)
+
+    print("Formato de SKU según tipo de artículo: SKU + 000 (Ej: MP001)")
+    print("Familia --> SKU = MP -> Materias Primas para Producción")
+    print("Familia --> SKU = PT -> Productos Terminados para Venta")
+    print("Familia --> SKU = AOF -> Artículos de Oficina")
+    print("Familia --> SKU = ADS -> Artículos de Seguridad")
+
+    # Separador visual idea traida de Markdown
     print("-" * 40)
 
 
