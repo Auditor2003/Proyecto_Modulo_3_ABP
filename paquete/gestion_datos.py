@@ -43,9 +43,10 @@ def agregar_producto(productos):
     nombre = input("Ingrese nombre del producto: ")
     familia = input("Ingrese familia (MP-PT-AOF-ADS): ")
 
-    # Solicita y convierte los datos numéricos
+    # Solicita y convierte los datos numéricos 
+    # Se usa float para calcular a fututo PMP (Costo Medio Ponderado)
     try:
-        costo = int(input("Ingrese costo: "))
+        costo = float(input("Ingrese costo: "))
         cantidad = int(input("Ingrese cantidad en stock: "))
     except ValueError:
         print("Error: costo o cantidad inválida. Producto no agregado.")
