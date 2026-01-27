@@ -216,6 +216,22 @@ gestion_datos.py – función agregar_producto()
 **Uso principal:**
 - Validar costo y cantidad ingresados por el usuario.
 
+### Justificación de no uso de algunos métodos de la consigna
+
+**.apend(), .remove(), No se utilizaron**
+- No se usaron listas explícitas ya que el sistema trabaja con diccionarios, dicionarios anidados, Set y Tupla
+- El sistema recorre los el diccionario sin crear listas
+- La eliminación de productos se hace sobre diccionarios de SKU
+
+**.get() No se utilizó**
+- El acceso a datos se hace directamente con claves SKU
+
+**.values() No se utilizó**
+El sistema usa for SKU, datos in productos,items(): en vez de values
+
+**El sistema no utiliza métodos de listas como .append() o .remove() debido a que la estructura principal del proyecto está basada en diccionarios. Se utiliza .keys() para obtener los SKUs existentes y validar unicidad, mientras que el recorrido de datos se realiza mediante .items(), permitiendo acceder simultáneamente a claves y valores.**
+
+
 ---
 
 ## Mejoras Futuras
