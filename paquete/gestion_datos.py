@@ -7,7 +7,7 @@ def agregar_producto(productos):
     print("AGREGAR PRODUCTO")
 
     # Separador visual idea traida de Markdown
-    print("-" * 40)
+    print("-" * 60)
 
     print("Formato de SKU según tipo de artículo: SKU + 000 (Ej: MP001)")
     print("Familia --> SKU = MP -> Materias Primas para Producción")
@@ -16,7 +16,7 @@ def agregar_producto(productos):
     print("Familia --> SKU = ADS -> Artículos de Seguridad")
 
     # Separador visual idea traida de Markdown
-    print("-" * 40)
+    print("-" * 60)
 
 
     # Solicita al usuario el SKU del producto
