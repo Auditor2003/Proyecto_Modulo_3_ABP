@@ -1,5 +1,6 @@
 # Función para buscar productos por familia
 # Refrencia Clase 9 --> ejercicio_final.py "Recorrido de diccionario de libros para busqueda por familia"
+# referencia Clase 3 --> ejercicio_final.py "Uso if not (autos)"
 
 def buscar_por_familia(productos):
     print("BUSCAR PRODUCTOS POR FAMILIA")
