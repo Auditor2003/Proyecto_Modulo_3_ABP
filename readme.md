@@ -35,8 +35,8 @@ El sistema está organizado en un **paquete** que contiene distintos **módulos*
 ### Paso 2: Código del programa
 
 #### 2.1 Inicialización
-- Inicializar una **lista vacía** para almacenar productos  
-- Cada producto se guarda como un **diccionario**
+- Inicializar un **diccionario vacío** para almacenar productos  
+- Cada producto se guarda como un **diccionario anidado** con información de datos generales y stock/costo
 
 ---
 
@@ -53,8 +53,8 @@ Mientras el usuario **NO elija salir**:
 - Pedir al usuario una opción  
 
 > Se utiliza la mayor cantidad de funciones vistas en clase, modularización del código  
-> y como **bonus**, el uso de diccionarios anidados.
-> Diicionario anidado en gestion_datos.py Lin 58-62
+> y como **bonus**, el uso de diccionarios anidados.  
+> Diccionario anidado en gestion_datos.py líneas 58-62
 
 ---
 
@@ -67,26 +67,27 @@ Mientras el usuario **NO elija salir**:
   - Nombre
   - Precio
   - Stock
-  - Costo
-  - Gasto
+  - Costo (Gasto)
+  
 - Validar los datos ingresados
-- Guardar el producto en la lista
+- Guardar el producto en el diccionario
+- Si el SKU ya existe, **sumar la cantidad al stock existente**
 - Mostrar mensaje de confirmación
 
 ---
 
 #### Opción 2: Listar productos
-- Si la lista está vacía:
+- Si el diccionario está vacío:
   - Mostrar mensaje **"No hay productos"**
 - Si no:
-  - Recorrer la lista
-  - Mostrar cada producto en stock
+  - Recorrer el diccionario
+  - Mostrar cada producto en stock con sus datos
 
 ---
 
 #### Opción 3: Buscar producto
 - Pedir identificador (ID o SKU)
-- Buscar el producto en la lista
+- Buscar el producto en el diccionario
 - Si existe:
   - Mostrar sus datos
 - Si no existe:
@@ -98,7 +99,7 @@ Mientras el usuario **NO elija salir**:
 - Pedir identificador del producto
 - Buscar el producto
 - Si existe:
-  - Eliminarlo de la lista
+  - Eliminarlo del diccionario
   - Mostrar mensaje de éxito
 - Si no:
   - Mostrar mensaje indicando que no se encontró
@@ -114,3 +115,14 @@ Mientras el usuario **NO elija salir**:
 #### Opción no válida
 - Mostrar mensaje de error
 - Continuar el ciclo
+
+---
+
+## Mejoras Futuras
+
+- Permitir que un mismo SKU pueda ingresarse con **diferentes costos** y cantidades (partidas múltiples)  
+- Listar todas las partidas de un SKU para un control detallado de inventario  
+- Agregar función para calcular **costo promedio ponderado** 
+
+- Esta mejora permitirá reflejar mejor los cambios de costos históricos sin afectar el stock actual
+
