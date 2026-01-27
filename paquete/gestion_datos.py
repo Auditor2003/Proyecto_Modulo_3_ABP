@@ -30,7 +30,7 @@ def agregar_producto(productos):
 
     # Solicita los datos generales del producto
     nombre = input("Ingrese nombre del producto: ")
-    familia = input("Ingrese familia: ")
+    familia = input("Ingrese familia (MP-PT-AOF-ADS): ")
 
     # Solicita y convierte los datos numéricos
     costo = int(input("Ingrese costo: "))
