@@ -134,6 +134,8 @@ def buscar_producto(productos):
 
 
 # Función para eliminar un producto por SKU
+# De momento solo elinina SKU total no por partidas
+
 def eliminar_producto(productos):
     print("ELIMINAR PRODUCTO")
 
