@@ -23,6 +23,9 @@ def buscar_por_familia(productos):
         familia_buscada = "AOF"
     elif opcion == "4":
         familia_buscada = "ADS"
+    elif opcion == "5":
+        familia_buscada = "TODOS"
+        
     else:
         print("Opción de familia inválida")
         return
