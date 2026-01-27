@@ -39,6 +39,7 @@ def buscar_por_familia(productos):
             encontrado = True
             print(f"- SKU: {sku}")
             print(f"  Nombre: {datos['info']['nombre']}")
+            print(f"  Familia: {datos['info']['familia']}")
             print(f"  Costo: {datos['stock']['costo']}")
             print(f"  Stock: {datos['stock']['cantidad']}")
             print("-" * 30)
