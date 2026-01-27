@@ -243,3 +243,5 @@ El sistema usa for SKU, datos in productos,items(): en vez de values
 - Esta mejora permitirá reflejar mejor los cambios de costos históricos sin afectar el stock actual
 
 - Se considerará realizar cambio para eliminar productos por partida o cantidades unitarias. De momento solo elimina SKU total
+
+- Se considerará agregar funcionalidad de rebaja de stock por venta de unidades aprovechando la función del punto anterior
