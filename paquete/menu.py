@@ -5,10 +5,12 @@ Aquí pruebo la modularización del menú inicial
 
 """
 
-# Aqui traigo una de la herrameintas de la caja gestion_datos.py
+# Aqui traigo las funciones desde gestion_datos.py
 from paquete.gestion_datos import agregar_producto
 from paquete.gestion_datos import listar_productos
 from paquete.gestion_datos import eliminar_producto
+
+# Aqui traigo la función de busqueda desde funciones_utiles.py
 from paquete.funciones_utiles import buscar_por_familia
 
 
