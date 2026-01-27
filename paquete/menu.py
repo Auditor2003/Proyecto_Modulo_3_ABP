@@ -22,6 +22,7 @@ def mostrar_menu(productos):
 
     while True:
         print("MENÚ PRINCIPAL")
+        print("Utilice sólo Mayúsculas - SHIFT activado")
         # Separador visual idea traida de Markdown
         print("-" * 40)
 
@@ -33,7 +34,7 @@ def mostrar_menu(productos):
 
         # Separador visual idea traida de Markdown
         print("-" * 40)
-        
+
         opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
