@@ -20,6 +20,8 @@ def agregar_producto(productos):
 
     # Tupla de familias válidas (estructura inmutable)
     # Las familias son constantes por lo que TUPLA es el mejor elemento
+    # Ref. Clase 8 --> Ejercicio sistema_coordenadas_tupla.py
+    
     FAMILIAS = ("MP", "PT", "AOF", "ADS")
 
     # Solicita al usuario el SKU del producto
