@@ -216,22 +216,6 @@ gestion_datos.py – función agregar_producto()
 **Uso principal:**
 - Validar costo y cantidad ingresados por el usuario.
 
-## Uso de Métodos de Estructuras de Datos
-
-A continuación se detalla el uso (o no uso) de algunos métodos específicos solicitados, indicando el motivo en cada caso.
-
-| Método    |  Uso |                          Justificación 
-|-----------|------------------------------------------------------------------------------------------|
-| .append() |  No  | No se utilizan listas explícitas en el proyecto. 
-| .remove() |  No  | La eliminación de datos se realiza sobre diccionarios mediante la instrucción `del`. 
-| .get()    |  No  | El acceso a los diccionarios se realiza directamente mediante claves. 
-| .keys()   |  Sí  | Se utiliza para obtener los SKUs existentes y validar unicidad al agregar productos. 
-| .values() |  No  | El recorrido de datos se realiza con `.items()` para acceder a claves y valores. 
-
-**Nota:**  
-El proyecto está orientado al uso de **diccionarios y diccionarios anidados**, 
-por lo que los métodos utilizados son coherentes con las estructuras de datos implementadas.
-
 ---
 
 ## Mejoras Futuras
