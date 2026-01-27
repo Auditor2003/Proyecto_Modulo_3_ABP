@@ -20,7 +20,7 @@ def buscar_por_familia(productos):
     elif opcion == "2":
         familia_buscada = "PT"
     elif opcion == "3":
-        familia_buscada = "ADO"
+        familia_buscada = "AOF"
     elif opcion == "4":
         familia_buscada = "ADS"
     else:
