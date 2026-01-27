@@ -225,3 +225,5 @@ gestion_datos.py – función agregar_producto()
 - Agregar función para calcular **costo promedio ponderado** 
 
 - Esta mejora permitirá reflejar mejor los cambios de costos históricos sin afectar el stock actual
+
+- Se considerará realizar cambio para eliminar productos por partida o cantidades unitarias. De momento solo elimina SKU total
