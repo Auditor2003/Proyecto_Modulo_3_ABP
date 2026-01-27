@@ -56,10 +56,10 @@ def agregar_producto(productos):
         return
 
     # Solicita y revisa los datos numéricos
-    # Se usa float para calcular a futuro PMP (Costo Medio Ponderado)
+    # Se usa int para evitar uso de (.) y textos
 
     try:
-        costo = float(input("Ingrese costo: "))
+        costo = int(input("Ingrese costo: "))
         cantidad = int(input("Ingrese cantidad en stock: "))
     except ValueError:
         print("Error: costo o cantidad inválida. Producto no agregado.")
