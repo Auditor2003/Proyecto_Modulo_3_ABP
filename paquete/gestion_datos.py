@@ -18,6 +18,9 @@ def agregar_producto(productos):
     # Separador visual idea traida de Markdown
     print("-" * 60)
 
+    # Tupla de familias válidas (estructura inmutable)
+    # Las familias son constantes por lo que TUPLA es el mejor elemento
+    FAMILIAS = ("MP", "PT", "AOF", "ADS")
 
     # Solicita al usuario el SKU del producto
     sku = input("Ingrese SKU: ")
@@ -42,6 +45,11 @@ def agregar_producto(productos):
 
     nombre = input("Ingrese nombre del producto: ")
     familia = input("Ingrese familia (MP-PT-AOF-ADS): ")
+
+    # Validación de familia usando tupla
+    if familia not in FAMILIAS:
+        print("Familia inválida. Producto no agregado.")
+        return
 
     # Solicita y revisa los datos numéricos
     # Se usa float para calcular a futuro PMP (Costo Medio Ponderado)
@@ -97,6 +105,7 @@ def listar_productos(productos):
         print(f"  Stock: {cantidad}")
         print("-" * 30)  # Esto se lo agregué para el formato
 
+
 # Función para buscar un producto por SKU
 def buscar_producto(productos):
     print("BUSCAR PRODUCTO")
@@ -118,6 +127,7 @@ def buscar_producto(productos):
         print(f"Stock: {datos['stock']['cantidad']}")
     else:
         print("Producto no encontrado.")
+
 
 # Función para eliminar un producto por SKU
 def eliminar_producto(productos):
